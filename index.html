@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zeus Automotive</title>
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Alpine Plugins -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Alpine Core -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/output.css" />
+  </head>
+  <body class="bg-[#68E069] relative min-h-screen">
+    <img id="thunder" src="./assets/thunder.svg" class="fixed top-0 h-full left-[1.5cqw] z-0" alt="Thunder" />
+    <header id="header" class="slide-bottom px-[3cqw] py-[2cqw] flex items-center justify-between z-[2] fixed w-full top-0">
+      <img src="./assets/logo.png" class="w-[17.5cqw]" alt="Logo" />
+
+      <nav class="flex font-space text-[1cqw] font-bold gap-[3cqw] items-center">
+        <p class="cursor-pointer">Motorcycles</p>
+        <p class="cursor-pointer">Accessories</p>
+        <p class="cursor-pointer">ATV</p>
+        <button class="rounded-full px-[2cqw] py-[.75cqw] bg-white">Book a test ride</button>
+      </nav>
+    </header>
+
+    <main class="relative z-[1] h-screen text-[#2F2F2F]">
+      <section class="px-[5cqw] py-[5cqw] h-full">
+        <div class="flex gap-[5cqw] h-full">
+          <div class="flex justify-center items-center flex-1">
+            <div id="heading" class="flex flex-col font-space font-bold leading-[.8]">
+              <p class="text-[5.2cqw] -tracking-[.2cqw]" data-splitting>Terms</p>
+              <div class="pl-[4cqw]">
+                <p id="and" class="text-[22.5cqw] font-normal">&</p>
+                <p class="text-[5.2cqw] -tracking-[.4cqw]" data-splitting>Conditions</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-1 mt-[5cqw] font-space">
+            <div
+              x-data="{
+				activeAccordion: 'accordion-1',
+				setActiveAccordion(id) {
+				this.activeAccordion = (this.activeAccordion == id) ? '' : id
+				}
+				}"
+              class="relative w-full mx-auto overflow-hidden text-sm font-normal"
+            >
+              <div x-data="{ id: $id('accordion') }" class="cursor-pointer group">
+                <button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-4 text-left">
+                  <span class="font-bold text-[2cqw]" data-splitting>Introduction</span>
+                  <svg class="w-[3cqw] h-[3cqw] duration-200 ease-out" :class="{ 'rotate-180': activeAccordion==id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div x-show="activeAccordion==id" x-collapse x-cloak>
+                  <div class="p-4 pt-0 opacity-70">
+                    <p class="leading-[1.7] text-[1cqw] content" data-splitting>
+                      Data Privacy is a fundamental principle within a modern society. Data privacy is not - unlike the term may first suggest - all about data, but about the people, of whom information (data) is processed. Data privacy is a fundamental right, which refers to the protection of the personal rights of natural, living people. Every person should have the opportunity to decide, who gets which information about him on which occasion (informational self-determination).
+                      <br /><br /><span class="font-bold">ZEUS India Private Limited</span> and ZEUS India Financial Services Private Limited (“ZEUS Group India”) has created this Policy to demonstrate its commitment towards the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information), Rules, 2011 (“Rules”) and also towards the ZEUS’s global policy for data privacy and protection.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div x-data="{ id: $id('accordion') }" class="cursor-pointer group">
+                <button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-4 text-left">
+                  <span class="font-bold text-[2cqw]" data-splitting>Purpose and usage</span>
+                  <svg class="w-[3cqw] h-[3cqw] duration-200 ease-out" :class="{ 'rotate-180': activeAccordion==id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div x-show="activeAccordion==id" x-collapse x-cloak>
+                  <div class="p-4 pt-0 opacity-70">
+                    <p class="leading-[1.7] text-[1cqw]" data-splitting>
+                      Data Privacy is a fundamental principle within a modern society. Data privacy is not - unlike the term may first suggest - all about data, but about the people, of whom information (data) is processed. Data privacy is a fundamental right, which refers to the protection of the personal rights of natural, living people. Every person should have the opportunity to decide, who gets which information about him on which occasion (informational self-determination).
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div x-data="{ id: $id('accordion') }" class="cursor-pointer group">
+                <button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-4 text-left">
+                  <span class="font-bold text-[2cqw]" data-splitting>Disclosure to Third Parties</span>
+                  <svg class="w-[3cqw] h-[3cqw] duration-200 ease-out" :class="{ 'rotate-180': activeAccordion==id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div x-show="activeAccordion==id" x-collapse x-cloak>
+                  <div class="p-4 pt-0 opacity-70">
+                    <p class="leading-[1.7] text-[1cqw]" data-splitting>
+                      Data Privacy is a fundamental principle within a modern society. Data privacy is not - unlike the term may first suggest - all about data, but about the people, of whom information (data) is processed. Data privacy is a fundamental right, which refers to the protection of the personal rights of natural, living people. Every person should have the opportunity to decide, who gets which information about him on which occasion (informational self-determination).
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div x-data="{ id: $id('accordion') }" class="cursor-pointer group">
+                <button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-4 text-left">
+                  <span class="font-bold text-[2cqw] leading-[1.5]" data-splitting>Security practices and<br />procedures</span>
+                  <svg class="w-[3cqw] h-[3cqw] duration-200 ease-out" :class="{ 'rotate-180': activeAccordion==id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div x-show="activeAccordion==id" x-collapse x-cloak>
+                  <div class="p-4 pt-0 opacity-70">
+                    <p class="leading-[1.7] text-[1cqw]" data-splitting>
+                      Data Privacy is a fundamental principle within a modern society. Data privacy is not - unlike the term may first suggest - all about data, but about the people, of whom information (data) is processed. Data privacy is a fundamental right, which refers to the protection of the personal rights of natural, living people. Every person should have the opportunity to decide, who gets which information about him on which occasion (informational self-determination).
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/splitting.min.js"></script>
+    <script>
+      Splitting();
+    </script>
+  </body>
+</html>
