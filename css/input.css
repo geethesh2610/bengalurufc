@@ -1,49 +1,41 @@
+@import url("https://p.typekit.net/p.css?s=1&k=cnz6ngu&ht=tk&f=10875.32265&a=94014211&app=typekit&e=css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.slide-bottom {
-	-webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+@font-face {
+	font-family: "din-condensed";
+	src: url("https://use.typekit.net/af/cfbead/0000000000000000000146b3/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/cfbead/0000000000000000000146b3/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),
+		url("https://use.typekit.net/af/cfbead/0000000000000000000146b3/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+	font-display: auto;
+	font-style: normal;
+	font-weight: 400;
+	font-stretch: normal;
 }
 
-#heading .splitting .char,
-#heading #and
- {
-    animation: slide-in 1s cubic-bezier(.5, 0, .5, 1) both;
-    animation-delay: calc(60ms * var(--char-index));
-  }
+@font-face {
+	font-family: "din-condensed";
+	src: url("https://use.typekit.net/af/6bdfe3/000000000000000077359e30/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"), url("https://use.typekit.net/af/6bdfe3/000000000000000077359e30/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),
+		url("https://use.typekit.net/af/6bdfe3/000000000000000077359e30/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+	font-display: auto;
+	font-style: normal;
+	font-weight: 300;
+	font-stretch: normal;
+}
 
-  .splitting .char {
-    animation: slide-in 1s cubic-bezier(.5, 0, .5, 1) both;
-    animation-delay: calc(5ms * var(--char-index));
-  }
-  
-  @keyframes slide-in {
-    from {
-      transform: translateY(-1em) rotate(-.5turn) scale(0);
-      opacity: 0;
-    }
-  }
+.font-din {
+	font-family: "din-condensed", sans-serif;
+}
 
+.text-stroke-blue {
+	-webkit-text-stroke: 0.07cqw #2a469c;
+}
 
-@-webkit-keyframes slide-bottom {
-    0% {
-      -webkit-transform: translateY(-100%);
-              transform: translateY(-100%);
-    }
-    100% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-    }
-  }
-  @keyframes slide-bottom {
-    0% {
-      -webkit-transform: translateY(-100%);
-              transform: translateY(-100%);
-    }
-    100% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-    }
-  }
+.text-stroke-black {
+	-webkit-text-stroke: 0.07cqw #000;
+}
+
+.text-stroke-white {
+	-webkit-text-stroke: 0.07cqw #fff;
+}

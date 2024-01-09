@@ -1,126 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zeus Automotive</title>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="./assets/logo.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bengaluru FC</title>
 
-    <!-- Google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
 
-    <!-- Alpine Plugins -->
-    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+		<!-- CSS -->
+		<link rel="stylesheet" href="./css/output.css" />
+	</head>
+	<body class="relative lg:min-h-screen bg-[#EFEFEF] flex-col flex">
+		<header class="flex justify-end pl-[3cqw] pr-[1cqw] py-[1cqw] gap-[12cqw] relative z-[20]">
+			<div class="absolute w-full top-0 left-0 flex">
+				<div class="bg-[#29479D] h-[.1cqw] flex-1"></div>
+				<div class="bg-[#EB1A20] h-[.1cqw] flex-1"></div>
+			</div>
+			<a href="#" class="absolute left-[3cqw] w-[10cqw]">
+				<img src="./assets/logo.png" class="w-[6cqw]" alt="Logo" />
+			</a>
 
-    <!-- Alpine Core -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+			<nav class="w-[77.5%] justify-between items-center font-inter text-[.95cqw] hidden md:flex">
+				<div>
+					<ul class="flex items-center gap-[4.5cqw]">
+						<li class="cursor-pointer">News</li>
+						<li class="cursor-pointer">Club</li>
+						<li class="cursor-pointer">First Team</li>
+						<li class="cursor-pointer">BFC B</li>
+						<li class="cursor-pointer">Academy</li>
+						<li class="cursor-pointer">BFC Soccer Schools</li>
+					</ul>
+				</div>
+				<div class="gap-[3cqw] md:gap-[1cqw] flex">
+					<button class="uppercase font-medium text-[#2A469B] w-[10cqw] rounded-[2cqw] md:rounded-[.5cqw] border border-[#2A469B] py-[1cqw] transition-all hover:bg-[#2A469B] hover:text-[#EFEFEF]">Shop</button>
+					<button class="uppercase font-medium text-[#2A469B] w-[10cqw] rounded-[2cqw] md:rounded-[.5cqw] border border-[#2A469B] py-[1cqw] transition-all hover:bg-[#2A469B] hover:text-[#EFEFEF]">Login</button>
+				</div>
+			</nav>
+		</header>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+		<section class="flex-1 px-[3cqw] md:px-[1cqw] pb-[1cqw] relative z-[10] mt-[15cqw] md:mt-0">
+			<div class="grid md:grid-cols-10 gap-[3cqw] md:gap-[1cqw] h-full">
+				<div class="flex flex-col gap-[3cqw] md:gap-[1cqw] md:col-span-7">
+					<div class="rounded-[2cqw] md:rounded-[.5cqw] bg-[#E3E3E3] flex-[55%] flex items-end relative">
+						<img src="./assets/sunil.png" class="absolute h-[60%] md:h-[110%] bottom-0 right-0 translate-x-[10%] object-cover" alt="Sunil chetri" />
+						<div class="px-[2.5cqw] pt-[6cqw] md:pt-0 pb-[30cqw] md:pb-[2cqw] leading-[.8]">
+							<div class="flex items-center font-din gap-[6cqw] md:gap-[3cqw]">
+								<p class="text-[20cqw] md:text-[10cqw] text-[#E3E3E3] text-stroke-blue">NEVER</p>
+								<p class="text-[#2A469C] text-[4.5cqw] md:text-[2.2cqw]">“NUNCA SE RINDE”</p>
+							</div>
+							<p class="text-[20cqw] md:text-[10cqw] text-[#2A469C] font-din text-stroke-black">SURRENDER</p>
+						</div>
+					</div>
+					<div class="flex flex-col md:flex-row flex-[45%] gap-[3cqw] md:gap-[1cqw]">
+						<div class="rounded-[2cqw] md:rounded-[.5cqw] bg-[#E3E3E3] md:w-[57.5%] relative">
+							<img src="./assets/kerala.png" class="absolute h-[90%] md:h-full bottom-0 right-0" alt="Kerala blasters" />
+							<div class="p-[4cqw] pb-[12cqw] md:p-[2.5cqw]">
+								<p class="text-[#2A469C] text-[6cqw] md:text-[2.2cqw] font-din leading-[1.1]">KERALA BLASTER BEATS<br />JAMSHEDPUR FC & JUMP<br />THREE SPOTS UP!</p>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/output.css" />
-  </head>
-  <body class="bg-[#68E069] relative min-h-screen">
-    <img id="thunder" src="./assets/thunder.svg" class="fixed top-0 h-full left-[1.5cqw] z-0" alt="Thunder" />
-    <header id="header" class="slide-bottom px-[3cqw] py-[2cqw] flex items-center justify-between z-[2] fixed w-full top-0">
-      <img src="./assets/logo.png" class="w-[17.5cqw]" alt="Logo" />
+								<button class="mt-[6cqw] md:mt-[2.5cqw] ml-[4cqw] md:ml-[3cqw] font-inter text-[2.75cqw] md:text-[.95cqw] font-medium uppercase relative px-[2cqw] md:px-0 py-[2cqw] md:py-[1cqw]">
+									<span class="absolute h-[.4cqw] md:h-[.15cqw] w-full top-0 left-0 bg-[#2A469C]"></span>
+									<span class="absolute -left-[3.25cqw] md:-left-[1.25cqw] aspect-square h-[6.5cqw] md:h-[2.5cqw] border-b-[.5cqw] md:border-b-[.15cqw] border-l-[.5cqw] md:border-l-[.15cqw] border-[#2A469C] top-[1.25cqw] md:top-[.55cqw] rotate-45"></span>
+									<span class="absolute -right-[3.25cqw] md:-right-[1.25cqw] aspect-square h-[6.5cqw] md:h-[2.5cqw] border-t-[.5cqw] md:border-t-[.15cqw] border-[#EB1A20] top-[1.25cqw] md:top-[.55cqw] rotate-45"></span>
+									<span>Watch Highlights</span>
+								</button>
+							</div>
+						</div>
+						<div class="rounded-[2cqw] md:rounded-[.5cqw] bg-[#2A469B] md:w-[42.5%] relative overflow-hidden">
+							<img src="./assets/mob.png" class="absolute hidden md:block w-[60%] bottom-0 right-0 translate-y-1/3 translate-x-[10%]" alt="Mob" />
+							<div class="px-[4.5cqw] md:px-[2cqw] py-[5cqw] md:py-[1.5cqw] uppercase font-din">
+								<p class="text-[5.5cqw] md:text-[2.2cqw] text-[#fff]">download the</p>
+								<p class="text-[15cqw] md:text-[4.5cqw] text-[#2A469B] leading-[1] text-stroke-white">bengaluru fc</p>
+								<p class="text-[5.5cqw] md:text-[2.2cqw] text-[#fff]">app today!!</p>
 
-      <nav class="flex font-space text-[1cqw] font-bold gap-[3cqw] items-center">
-        <p class="cursor-pointer">Motorcycles</p>
-        <p class="cursor-pointer">Accessories</p>
-        <p class="cursor-pointer">ATV</p>
-        <button class="rounded-full px-[2cqw] py-[.75cqw] bg-white">Book a test ride</button>
-      </nav>
-    </header>
+								<div class="mt-[5cqw] md:mt-[2cqw]">
+									<img src="./assets/gs.png" class="w-[20cqw] md:w-[8.5cqw]" alt="Playstore" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="md:col-span-3 md:col-start-8">
+					<div class="flex flex-col h-full gap-[3cqw] md:gap-[1cqw]">
+						<div class="rounded-[1cqw] bg-[#E3E3E3] flex-[37.5%]">
+							<div class="pb-[1cqw]">
+								<div class="flex">
+									<div class="bg-[#EFEFEF] px-[2cqw] py-[.75cqw] font-din text-[1.5cqw]">LIVE MATCHES</div>
+									<div class="flex-1 flex items-center justify-center gap-[3cqw] md:gap-[1cqw]">
+										<div class="flex items-center gap-[.4cqw] animate-pulse">
+											<span class="w-[.45cqw] aspect-square rounded-full bg-[#EB222B]"></span>
+											<p class="text-[#EB222B] font-inter text-[.9cqw]">Live</p>
+										</div>
+										<span class="h-[1.5cqw] w-[.1cqw] bg-[#c0c0c0]"></span>
+										<p class="font-inter text-[#2B2B2B] text-[.9cqw]">NOVEMBER 16TH</p>
+									</div>
+								</div>
+								<div class="pt-[2cqw] px-[4.5cqw]">
+									<div class="flex justify-between items-center font-din text-[3cqw]">
+										<img src="./assets/logo.png" class="h-[4.75cqw]" alt="Bengaluru" />
+										<p class="text-[#2A469C]">4</p>
+										<p class="text-[#2A469C]">:</p>
+										<p class="text-[#6B779A]">1</p>
+										<img src="./assets/goa.png" class="h-[3.85cqw]" alt="Goa" />
+									</div>
+								</div>
+								<p class="text-[1.35cqw] font-din text-[#2A469C] text-center mt-[1cqw]">INDIAN SUPER LEAGUE</p>
+							</div>
+						</div>
+						<div class="rounded-[1cqw] bg-[#E3E3E3] flex-[62.5%]">
+							<div class="bg-[#EFEFEF] px-[2cqw] py-[.75cqw] font-din text-[1.5cqw] w-max">STANDINGS</div>
 
-    <main class="relative z-[1] h-screen text-[#2F2F2F]">
-      <section class="px-[5cqw] py-[5cqw] h-full">
-        <div class="flex gap-[5cqw] h-full">
-          <div class="flex justify-center items-center flex-1">
-            <div id="heading" class="flex flex-col font-space font-bold leading-[.8]">
-              <p class="text-[5.2cqw] -tracking-[.2cqw]" data-splitting>Terms</p>
-              <div class="pl-[4cqw]">
-                <p id="and" class="text-[22.5cqw] font-normal">&</p>
-                <p class="text-[5.2cqw] -tracking-[.4cqw]" data-splitting>Conditions</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex-1 mt-[5cqw] font-space">
-            <div
-              x-data="{
-				activeAccordion: 'accordion-1',
-				setActiveAccordion(id) {
-				this.activeAccordion = (this.activeAccordion == id) ? '' : id
-				}
-				}"
-              class="relative w-full mx-auto overflow-hidden text-sm font-normal"
-            >
-              <div x-data="{ id: $id('accordion') }" class="cursor-pointer group">
-                <button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-4 text-left">
-                  <span class="font-bold text-[2cqw]" data-splitting>Introduction</span>
-                  <svg class="w-[3cqw] h-[3cqw] duration-200 ease-out" :class="{ 'rotate-180': activeAccordion==id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </button>
-                <div x-show="activeAccordion==id" x-collapse x-cloak>
-                  <div class="p-4 pt-0 opacity-70">
-                    <p class="leading-[1.7] text-[1cqw] content" data-splitting>
-                      Data Privacy is a fundamental principle within a modern society. Data privacy is not - unlike the term may first suggest - all about data, but about the people, of whom information (data) is processed. Data privacy is a fundamental right, which refers to the protection of the personal rights of natural, living people. Every person should have the opportunity to decide, who gets which information about him on which occasion (informational self-determination).
-                      <br /><br /><span class="font-bold">ZEUS India Private Limited</span> and ZEUS India Financial Services Private Limited (“ZEUS Group India”) has created this Policy to demonstrate its commitment towards the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information), Rules, 2011 (“Rules”) and also towards the ZEUS’s global policy for data privacy and protection.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div x-data="{ id: $id('accordion') }" class="cursor-pointer group">
-                <button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-4 text-left">
-                  <span class="font-bold text-[2cqw]" data-splitting>Purpose and usage</span>
-                  <svg class="w-[3cqw] h-[3cqw] duration-200 ease-out" :class="{ 'rotate-180': activeAccordion==id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </button>
-                <div x-show="activeAccordion==id" x-collapse x-cloak>
-                  <div class="p-4 pt-0 opacity-70">
-                    <p class="leading-[1.7] text-[1cqw]" data-splitting>
-                      Data Privacy is a fundamental principle within a modern society. Data privacy is not - unlike the term may first suggest - all about data, but about the people, of whom information (data) is processed. Data privacy is a fundamental right, which refers to the protection of the personal rights of natural, living people. Every person should have the opportunity to decide, who gets which information about him on which occasion (informational self-determination).
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div x-data="{ id: $id('accordion') }" class="cursor-pointer group">
-                <button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-4 text-left">
-                  <span class="font-bold text-[2cqw]" data-splitting>Disclosure to Third Parties</span>
-                  <svg class="w-[3cqw] h-[3cqw] duration-200 ease-out" :class="{ 'rotate-180': activeAccordion==id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </button>
-                <div x-show="activeAccordion==id" x-collapse x-cloak>
-                  <div class="p-4 pt-0 opacity-70">
-                    <p class="leading-[1.7] text-[1cqw]" data-splitting>
-                      Data Privacy is a fundamental principle within a modern society. Data privacy is not - unlike the term may first suggest - all about data, but about the people, of whom information (data) is processed. Data privacy is a fundamental right, which refers to the protection of the personal rights of natural, living people. Every person should have the opportunity to decide, who gets which information about him on which occasion (informational self-determination).
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div x-data="{ id: $id('accordion') }" class="cursor-pointer group">
-                <button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-4 text-left">
-                  <span class="font-bold text-[2cqw] leading-[1.5]" data-splitting>Security practices and<br />procedures</span>
-                  <svg class="w-[3cqw] h-[3cqw] duration-200 ease-out" :class="{ 'rotate-180': activeAccordion==id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </button>
-                <div x-show="activeAccordion==id" x-collapse x-cloak>
-                  <div class="p-4 pt-0 opacity-70">
-                    <p class="leading-[1.7] text-[1cqw]" data-splitting>
-                      Data Privacy is a fundamental principle within a modern society. Data privacy is not - unlike the term may first suggest - all about data, but about the people, of whom information (data) is processed. Data privacy is a fundamental right, which refers to the protection of the personal rights of natural, living people. Every person should have the opportunity to decide, who gets which information about him on which occasion (informational self-determination).
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <script src="./js/splitting.min.js"></script>
-    <script>
-      Splitting();
-    </script>
-  </body>
+							<div class="px-[2cqw] pb-[1cqw] pt-[1.5cqw]">
+								<table class="font-inter text-[.95cqw] w-full">
+									<tr>
+										<th></th>
+										<th class="font-inter font-bold text-left pb-[.75cqw]">Clubs</th>
+										<th class="font-inter font-bold pb-[.75cqw]">W</th>
+										<th class="font-inter font-bold px-[.5cqw] pb-[.75cqw]">D</th>
+										<th class="font-inter font-bold pb-[.75cqw]">L</th>
+										<th class="font-inter font-bold pl-[.35cqw] pb-[.75cqw]">PTS</th>
+									</tr>
+									<tr>
+										<td class="pr-[.75cqw] text-[#2A469B] font-medium">1</td>
+										<td class="font-inter font-bold text-[#2A469B] py-[.75cqw]">Bengaluru FC (Q)</td>
+										<td class="font-inter text-[#2A469B] text-center">6</td>
+										<td class="font-inter text-[#2A469B] text-center px-[.5cqw]">1</td>
+										<td class="font-inter text-[#2A469B] text-center">0</td>
+										<td class="font-inter text-[#2A469B] text-center pl-[.35cqw]">15</td>
+									</tr>
+									<tr>
+										<td class="pr-[.75cqw] text-[#2A469B] font-medium">2</td>
+										<td class="font-inter font-bold text-[#2A469B] py-[.75cqw]">Mumbai FC (Q)</td>
+										<td class="font-inter text-[#2A469B] text-center">5</td>
+										<td class="font-inter text-[#2A469B] text-center px-[.5cqw]">1</td>
+										<td class="font-inter text-[#2A469B] text-center">1</td>
+										<td class="font-inter text-[#2A469B] text-center pl-[.35cqw]">13</td>
+									</tr>
+									<tr>
+										<td class="pr-[.75cqw] text-[#2F2F2F]/30">3</td>
+										<td class="font-inter py-[.75cqw]">Goa FC</td>
+										<td class="font-inter text-center">5</td>
+										<td class="font-inter text-center px-[.5cqw]">1</td>
+										<td class="font-inter text-center">3</td>
+										<td class="font-inter text-center pl-[.35cqw]">9</td>
+									</tr>
+									<tr>
+										<td class="pr-[.75cqw] text-[#2F2F2F]/30">4</td>
+										<td class="font-inter py-[.75cqw]">Kerala Blasters</td>
+										<td class="font-inter text-center">4</td>
+										<td class="font-inter text-center px-[.5cqw]">1</td>
+										<td class="font-inter text-center">3</td>
+										<td class="font-inter text-center pl-[.35cqw]">8</td>
+									</tr>
+									<tr>
+										<td class="pr-[.75cqw] text-[#2F2F2F]/30">5</td>
+										<td class="font-inter py-[.75cqw]">Chennaiyan FC</td>
+										<td class="font-inter text-center">3</td>
+										<td class="font-inter text-center px-[.5cqw]">1</td>
+										<td class="font-inter text-center">2</td>
+										<td class="font-inter text-center pl-[.35cqw]">7</td>
+									</tr>
+									<tr>
+										<td class="pr-[.75cqw] text-[#2F2F2F]/30">6</td>
+										<td class="font-inter py-[.75cqw]">Odhisha FC</td>
+										<td class="font-inter text-center">6</td>
+										<td class="font-inter text-center px-[.5cqw]">1</td>
+										<td class="font-inter text-center">3</td>
+										<td class="font-inter text-center pl-[.35cqw]">7</td>
+									</tr>
+									<tr>
+										<td class="pr-[.75cqw] text-[#2F2F2F]/30">7</td>
+										<td class="font-inter py-[.75cqw]">Punjab FC</td>
+										<td class="font-inter text-center">6</td>
+										<td class="font-inter text-center px-[.5cqw]">1</td>
+										<td class="font-inter text-center">6</td>
+										<td class="font-inter text-center pl-[.35cqw]">6</td>
+									</tr>
+									<tr>
+										<td class="pr-[.75cqw] text-[#2F2F2F]/30">7</td>
+										<td class="font-inter py-[.75cqw]">Punjab FC</td>
+										<td class="font-inter text-center">6</td>
+										<td class="font-inter text-center px-[.5cqw]">1</td>
+										<td class="font-inter text-center">6</td>
+										<td class="font-inter text-center pl-[.35cqw]">6</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
 </html>
